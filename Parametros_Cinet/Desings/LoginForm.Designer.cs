@@ -28,41 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             textBoxUser = new TextBox();
             btnConnect = new Button();
             textBoxPass = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
             textBoxIp = new TextBox();
             textBoxPort = new TextBox();
-            label4 = new Label();
             comboBoxDataBase = new ComboBox();
             btnLogin = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            pictureBox1 = new PictureBox();
+            label5 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Variable Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(124, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(57, 16);
-            label1.TabIndex = 0;
-            label1.Text = "USUARIO";
             // 
             // textBoxUser
             // 
-            textBoxUser.Location = new Point(124, 27);
+            textBoxUser.Location = new Point(22, 94);
             textBoxUser.Name = "textBoxUser";
-            textBoxUser.Size = new Size(100, 23);
+            textBoxUser.Size = new Size(108, 23);
             textBoxUser.TabIndex = 1;
             textBoxUser.Text = "10";
             textBoxUser.TextChanged += textBoxUser_TextChanged;
             // 
             // btnConnect
             // 
-            btnConnect.Location = new Point(123, 174);
+            btnConnect.Location = new Point(22, 245);
             btnConnect.Name = "btnConnect";
             btnConnect.Size = new Size(82, 23);
             btnConnect.TabIndex = 5;
@@ -72,65 +65,36 @@
             // 
             // textBoxPass
             // 
-            textBoxPass.Location = new Point(124, 71);
+            textBoxPass.Location = new Point(22, 138);
             textBoxPass.Name = "textBoxPass";
-            textBoxPass.Size = new Size(100, 23);
+            textBoxPass.Size = new Size(108, 23);
             textBoxPass.TabIndex = 4;
+            textBoxPass.Text = "cinettorcel";
             textBoxPass.UseSystemPasswordChar = true;
             textBoxPass.TextChanged += textBoxPass_TextChanged;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Variable Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(124, 53);
-            label2.Name = "label2";
-            label2.Size = new Size(84, 16);
-            label2.TabIndex = 3;
-            label2.Text = "CONTRASEÑA";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Variable Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(124, 97);
-            label3.Name = "label3";
-            label3.Size = new Size(81, 16);
-            label3.TabIndex = 6;
-            label3.Text = "DIRECCIÓN IP";
-            // 
             // textBoxIp
             // 
-            textBoxIp.Location = new Point(124, 116);
+            textBoxIp.Location = new Point(22, 187);
             textBoxIp.Name = "textBoxIp";
-            textBoxIp.Size = new Size(100, 23);
+            textBoxIp.Size = new Size(108, 23);
             textBoxIp.TabIndex = 7;
             textBoxIp.Text = "26.98.235.46";
             textBoxIp.TextChanged += textBoxIp_TextChanged;
             // 
             // textBoxPort
             // 
-            textBoxPort.Location = new Point(124, 145);
+            textBoxPort.Location = new Point(22, 216);
             textBoxPort.Name = "textBoxPort";
-            textBoxPort.Size = new Size(100, 23);
+            textBoxPort.Size = new Size(108, 23);
             textBoxPort.TabIndex = 8;
             textBoxPort.Text = "1433";
             textBoxPort.TextChanged += textBoxPort_TextChanged;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Variable Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(124, 200);
-            label4.Name = "label4";
-            label4.Size = new Size(91, 16);
-            label4.TabIndex = 9;
-            label4.Text = "BASE DE DATOS";
-            // 
             // comboBoxDataBase
             // 
             comboBoxDataBase.FormattingEnabled = true;
-            comboBoxDataBase.Location = new Point(124, 219);
+            comboBoxDataBase.Location = new Point(22, 308);
             comboBoxDataBase.Name = "comboBoxDataBase";
             comboBoxDataBase.Size = new Size(97, 23);
             comboBoxDataBase.TabIndex = 10;
@@ -138,7 +102,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(227, 218);
+            btnLogin.Location = new Point(125, 307);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(75, 23);
             btnLogin.TabIndex = 11;
@@ -146,40 +110,113 @@
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Variable Display Semib", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(22, 71);
+            label1.Name = "label1";
+            label1.Size = new Size(72, 20);
+            label1.TabIndex = 12;
+            label1.Text = "USUARIO";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Variable Display Semib", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(22, 285);
+            label2.Name = "label2";
+            label2.Size = new Size(119, 20);
+            label2.TabIndex = 13;
+            label2.Text = "BASE DE DATOS";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Variable Display Semib", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(21, 164);
+            label3.Name = "label3";
+            label3.Size = new Size(22, 20);
+            label3.TabIndex = 14;
+            label3.Text = "IP";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Variable Display Semib", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(21, 120);
+            label4.Name = "label4";
+            label4.Size = new Size(107, 20);
+            label4.TabIndex = 15;
+            label4.Text = "CONTRASEÑA";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(49, 117, 162);
+            pictureBox1.Location = new Point(-6, -3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(245, 56);
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(49, 117, 162);
+            label5.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(12, 9);
+            label5.Name = "label5";
+            label5.Size = new Size(79, 32);
+            label5.TabIndex = 17;
+            label5.Text = "CINET\r\n";
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(375, 261);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(231, 348);
+            Controls.Add(label5);
+            Controls.Add(pictureBox1);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(btnLogin);
             Controls.Add(comboBoxDataBase);
-            Controls.Add(label4);
             Controls.Add(textBoxPort);
             Controls.Add(textBoxIp);
-            Controls.Add(label3);
             Controls.Add(btnConnect);
             Controls.Add(textBoxPass);
-            Controls.Add(label2);
             Controls.Add(textBoxUser);
-            Controls.Add(label1);
+            MaximizeBox = false;
             Name = "LoginForm";
-            Text = "LoginForm";
+            Text = "CINET";
+            Load += LoginForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private TextBox textBoxUser;
         private Button btnConnect;
         private TextBox textBoxPass;
-        private Label label2;
-        private Label label3;
         private TextBox textBoxIp;
         private TextBox textBoxPort;
-        private Label label4;
-        private ComboBox comboBoxDataBase;
         private Button btnLogin;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField3;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField4;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private PictureBox pictureBox1;
+        private Label label5;
+        public ComboBox comboBoxDataBase;
     }
 }

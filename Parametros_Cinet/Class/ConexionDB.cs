@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
-namespace QuerysApp.Class
+namespace Parametros_Cinet.Class
 {
     public class ConexionDB
     {
@@ -168,6 +168,37 @@ namespace QuerysApp.Class
                 }
             }
             return false;
+        }
+        #endregion
+
+        #region
+        public string ObtenerValorDesdeBD(string consulta)
+        {
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(StringConexion()))
+                {
+                    sqlConnection.Open();
+
+                    using (SqlCommand comando = new SqlCommand(consulta, sqlConnection))
+                    {
+                        SqlDataReader reader = comando.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            return reader["para_valor"].ToString();
+                        }
+                        return "NE";
+
+                    }
+                    sqlConnection.Close();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Log.Error("ERROR QUERY: n" + ex.ToString());
+                return string.Empty;
+            }
         }
         #endregion
     }

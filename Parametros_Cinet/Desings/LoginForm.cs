@@ -1,4 +1,5 @@
-﻿using QuerysApp.Class;
+﻿using MaterialSkin.Controls;
+using Parametros_Cinet.Class;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,7 +53,31 @@ namespace Parametros_Cinet.Desings
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            ConexionDB.baseDatos = comboBoxDataBase.Text.Trim();
+            ValidarBaseDeDatos();
+        }
 
+        private void ValidarBaseDeDatos()
+        {
+            CinetPdvForm cinetPdvForm = new CinetPdvForm();
+            BackofficeForm backofficeForm = new BackofficeForm();
+
+            var opcion = comboBoxDataBase.Text.Trim();
+
+            switch (opcion.ToLower())
+            {
+                case "backoffice":
+                    backofficeForm.Show();
+                    this.Hide();
+                    break;
+                case "cinet_pdv":
+                    cinetPdvForm.Show();
+                    this.Hide();
+                    break;
+                default:
+                    MessageBox.Show("Seleccione una base de datos válida");
+                    break;
+            }
         }
 
         private void textBoxIp_TextChanged(object sender, EventArgs e)
@@ -64,5 +89,11 @@ namespace Parametros_Cinet.Desings
         {
 
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
